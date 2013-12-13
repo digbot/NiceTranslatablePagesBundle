@@ -11,7 +11,8 @@
         }
     ],
     "require": {
-        "chaos-drone/nice-pages-bundle": "*@dev"
+        "chaos-drone/nice-pages-core-bundle": "*@dev",
+        "a2lix/translation-form-bundle": "1.*@dev"
     },
     "suggest": {
         "doctrine/doctrine-fixtures-bundle": "dev-master"

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    
+        <services>
+            <service id="cadrone.nice_pages.page_admin" class="%cadrone.nice_pages.sonata_admin_class%">
+                <tag name="sonata.admin" manager_type="orm" group="%cadrone.nice_pages.sonata_admin_group%" label="%cadrone.nice_pages.sonata_admin_label%"/>
+                
+                <argument />
+                <argument>%cadrone.nice_pages.page_class%</argument>
+                <argument />
+            </service>
+        </services>
+        
+    </container>
