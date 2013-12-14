@@ -2,7 +2,7 @@
 
 namespace Cadrone\NiceTranslatablePagesBundle\Entity;
 
-use Cadrone\NicePagesCoreBundle\Entity\PageInterface;
+use Cadrone\NicePagesBundle\Entity\PageInterface;
 use Doctrine\ORM\Mapping as ORM;
 
 abstract class BasePage implements PageInterface

@@ -2,7 +2,7 @@
 
 namespace Cadrone\NiceTranslatablePagesBundle\Admin;
 
-use Cadrone\NicePagesCoreBundle\Admin\BasePageAdmin as BaseClass;
+use Cadrone\NicePagesBundle\Admin\BasePageAdmin as BaseClass;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 
@@ -25,4 +25,5 @@ class PageAdmin extends BaseClass
                 ->end()
         ;
     }
+
 }

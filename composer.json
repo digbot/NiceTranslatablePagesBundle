@@ -11,7 +11,7 @@
         }
     ],
     "require": {
-        "chaos-drone/nice-pages-core-bundle": "*@dev",
+        "chaos-drone/nice-pages-bundle": "*@dev",
         "a2lix/translation-form-bundle": "1.*@dev"
     },
     "suggest": {

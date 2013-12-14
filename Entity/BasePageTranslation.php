@@ -2,7 +2,7 @@
 
 namespace Cadrone\NiceTranslatablePagesBundle\Entity;
 
-use Cadrone\NicePagesCoreBundle\Entity\MappedPageBase;
+use Cadrone\NicePagesBundle\Entity\MappedPageBase;
 use Doctrine\ORM\Mapping as ORM;
 use Knp\DoctrineBehaviors\Model as ORMBehaviors;
 
