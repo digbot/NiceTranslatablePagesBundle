@@ -17,6 +17,11 @@ abstract class BasePage implements PageInterface
      */
     protected $id;
 
+    /**
+     * Current locale
+     */
+    protected $locale;
+
     public function __toString()
     {
         return $this->translate()->getTitle() ? : "-";
@@ -25,6 +30,16 @@ abstract class BasePage implements PageInterface
     public function __call($name, $arguments)
     {
         return $this->proxyCurrentLocaleTranslation($name, $arguments);
+    }
+
+    public function setLocale($locale)
+    {
+        $this->locale = $locale;
+    }
+
+    public function getLocale()
+    {
+        return $this->locale;
     }
 
     /**
@@ -37,44 +52,24 @@ abstract class BasePage implements PageInterface
         return $this->id;
     }
 
-    public function setTitle($title, $locale = null)
+    public function getTitle()
     {
-        return $this->translate($locale)->setTitle($title);
+        return $this->translate($this->locale)->getTitle();
     }
 
-    public function getTitle($locale = null)
+    public function getText()
     {
-        return $this->translate($locale)->getTitle();
+        return $this->translate($this->locale)->getText();
     }
 
-    public function setText($text, $locale = null)
+    public function getMetaKeywords()
     {
-        return $this->translate($locale)->setText($text);
+        return $this->translate($this->locale)->getMetaKeywords();
     }
 
-    public function getText($locale = null)
+    public function getMetaDescription()
     {
-        return $this->translate($locale)->getText();
-    }
-
-    public function setMetaKeywords($metaKeywords, $locale = null)
-    {
-        return $this->translate($locale)->setMetaKeywords($metaKeywords);
-    }
-
-    public function getMetaKeywords($locale = null)
-    {
-        return $this->translate($locale)->getMetaKeywords();
-    }
-
-    public function setMetaDescription($metaDescription, $locale = null)
-    {
-        return $this->translate($locale)->setMetaDescription($metaDescription);
-    }
-
-    public function getMetaDescription($locale = null)
-    {
-        return $this->translate($locale)->getMetaDescription();
+        return $this->translate($this->locale)->getMetaDescription();
     }
 
 }
