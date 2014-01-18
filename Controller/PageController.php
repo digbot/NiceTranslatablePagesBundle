@@ -15,6 +15,8 @@ class PageController extends Controller
         $locale = (new $entity)->getDefaultLocale();
         $page = $this->getDoctrine()->getRepository($entity)->findPageBySlug($request->get("slug"), $locale);
 
+        $page->setLocale($request->get("_locale"));
+
         return $this->render("CadroneNicePagesBundle:Page:index.html.twig", array(
                     "page" => $page,
         ));
