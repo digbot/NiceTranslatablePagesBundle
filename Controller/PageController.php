@@ -12,7 +12,8 @@ class PageController extends Controller
         $request = $this->getRequest();
         $entity = $this->container->getParameter("cadrone.nice_pages.page_class");
 
-        $page = $this->getDoctrine()->getRepository($entity)->findPageBySlug($request->get("slug"), $request->getLocale());
+        $locale = (new Page)->getDefaultLocale();
+        $page = $this->getDoctrine()->getRepository($entity)->findPageBySlug($request->get("slug"), $locale);
 
         return $this->render("CadroneNicePagesBundle:Page:index.html.twig", array(
                     "page" => $page,
