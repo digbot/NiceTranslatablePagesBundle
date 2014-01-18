@@ -20,6 +20,7 @@ class PageAdmin extends BaseClass
                     "fields" => array(
                         "title" => [],
                         "text" => array_merge($text_field_type, $text_field_config),
+                        "slug" => ["display" => false,],
                     ),
                 ])
                 ->end()
