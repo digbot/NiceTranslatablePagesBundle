@@ -9,13 +9,5 @@ use Knp\DoctrineBehaviors\Model as ORMBehaviors;
 class BasePageTranslation extends MappedPageBase
 {
 
-    use ORMBehaviors\Translatable\Translation,
-        ORMBehaviors\Sluggable\Sluggable
-    ;
-
-    public function getSluggableFields()
-    {
-        return ["title"];
-    }
-
+    use ORMBehaviors\Translatable\Translation;
 }
