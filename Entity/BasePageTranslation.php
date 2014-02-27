@@ -10,4 +10,10 @@ class BasePageTranslation extends MappedPageBase
 {
 
     use ORMBehaviors\Translatable\Translation;
+
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
 }

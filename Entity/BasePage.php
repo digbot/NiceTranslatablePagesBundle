@@ -22,6 +22,11 @@ abstract class BasePage implements PageInterface
      */
     protected $locale;
 
+    public function __construct()
+    {
+
+    }
+
     public function __toString()
     {
         return $this->translate()->getTitle() ? : "-";
