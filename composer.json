@@ -1,5 +1,5 @@
 {
-    "name": "chaos-drone/nice-translatable-pages-bundle",
+    "name": "digbot/nice-translatable-pages-bundle",
     "type": "symfony-bundle",
     "description": "Simplisctic but with powerful features bundle for managing static content in Symfony2.",
     "keywords": ["symfony2", "doctrine2", "i18n", "internationalization", "translation", "translatable", "page", "pages", "cms"],
